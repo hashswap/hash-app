@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Reg from "./Register"
+import Register from "./Register"
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     {/*<App />*/}
-    <Reg />
+    <Register />
   </React.StrictMode>,
   document.getElementById('root')
 );

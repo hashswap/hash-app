@@ -1,7 +1,6 @@
-import React, { ReactElement } from 'react';
-import { Register } from "hashswap-zilliqa-sdk/lib/register"
+import { Hello } from "hashswap-zilliqa-sdk/lib/hello"
 import { Network } from "hashswap-zilliqa-sdk/lib/constants"
-
+import './Register.css';
 
 const getConnectedZilPay = async () => {
     const zilPay = (window as any).zilPay;
@@ -18,30 +17,44 @@ const getConnectedZilPay = async () => {
   };
 
 
-//const privateKey = '5d99e6eb161b5a693934dacc6bd54d87d89bbb43ebda9d95f9cadcd322fcc862';
-//const privateKey = '2c9eb921e67410aa658140c0c79c294473a5ae5fa111c7af7ededd0d3592dca3';
-const privateKeyInfluencer = '3a3ada7ba3f7f8e6a6270b62f1f6644e7f416c2a3d6ff0ef8c802b1fbf81ef9e';
 
-export const Register1 = (async() => {
-    getConnectedZilPay();
-    //const owner = new Register(Network.TestNet, privateKey);
-    const influencer = new Register(Network.TestNet, privateKeyInfluencer);
-    await influencer.initialize();
-    //await hashswap.SetRegisterOracle();
-    //await hashswap.RegisterLink('https://www.instagram.com/kendalljenner/');
-    await influencer.RequestToken('Kendall Jenner', 'KJT', 18, 900000);
-    //await influencer.getAppState();
-    await influencer.teardown();
+const Register11= (async () => {
+    const st = await getConnectedZilPay().then((zilp)=>{
+        console.log('zilp', zilp);
+        const hashswap = new Hello(Network.TestNet, zilp.wallet.provider);
+        return hashswap}).then(async(hashswap: any)=>{
+            await hashswap.initialize();
+            return hashswap.getAppState().contractState.welcome_msg;
+        });
+        console.log('st',st);
+    return st;
+    });
 
-    const h = "hello"
 
-    return h;
-});
-
+function Register() {
+    const st = Register11();
+    //console.log('st1',st);
+    return (
+      <div className="Register">
+        <header className="Register-header">
+          <p>
+          </p>
+          <a
+            className="Register-link"
+            href={`${st}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+                      </a>
+        </header>
+      </div>
+    );
+  }
+  
 function Reg() {
     return (
         <>
-            <Register1/>
+            <Register/>
 
 </>
     );
