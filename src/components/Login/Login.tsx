@@ -3,29 +3,24 @@ import LoginForm from './LoginForm';
 import './Login.css';
 
 
-type creds = {
-    email:string,
-    password:string,
-}
-
 function Login (){
     const adminUser = {
-        email: "log@me.in",
+        user: "log@me.in",
         password: "please"
     }
 
     const [user, setUser] = useState("");
     const [Error, setError] = useState("");
 
-    const Login = (details:creds) => {
+    const Login = (details:any) => {
         console.log('Login.tsx1', details);
 
-        if ((details.email === adminUser.email) && (details.password === adminUser.password)) {
-        console.log('logged in',details, adminUser,(details.email === adminUser.email),(details.password === adminUser.password));
+        if ((details.user === adminUser.user) && (details.password === adminUser.password)) {
+        console.log('logged in');
         setUser(details.email);
 
         } else {
-            console.log('details do not match', details,adminUser,(details.email === adminUser.email),(details.password === adminUser.password));
+            console.log('details do not match');
             setError('details do not match');
         }
 
