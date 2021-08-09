@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Register from "./Register"
+//import Header from './components/Header/Header';
+//import Register from "./Register"
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/*<App />*/}
-    <Register />
+      <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

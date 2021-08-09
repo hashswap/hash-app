@@ -53,10 +53,8 @@ function Register() {
   
 function Reg() {
     return (
-        <>
-            <Register/>
+        <Register/>
 
-</>
     );
   }
   

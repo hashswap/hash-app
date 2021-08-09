@@ -1,0 +1,67 @@
+.form-inner{
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20vh;
+    background-color: rgb(255, 255, 255);
+}
+
+
+input{
+    width: 85%;
+    border: 1px solid #dbdbdb;
+    padding: 5px;
+    margin: 2px 0;
+    border-radius: 5px;
+    background-color: #fafafa;
+    box-shadow: none;
+    color: grey;
+    margin-left: 15px;
+}
+
+button {
+    width: 80%;
+    height: 25%;
+    margin: 15px 0;
+    background-color: rgb(236, 126, 53);
+    box-shadow: none;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #ffffff;
+    border: none;
+    margin-left: 27px;
+    border-radius: 2px;
+}
+
+.logo {
+    display: block;
+    background-image: url(../../hash.png);
+    background-size: 210px 50px;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 65%;
+    text-indent: -100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px ;
+  }
+
+.form-outer{
+    width: 300px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 1vh;
+    background-color: rgb(255, 255, 255);
+    font-size: 13px;
+    text-align: center;
+}

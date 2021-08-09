@@ -1,0 +1,28 @@
+ .Nav {
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgba(26, 14, 14, 0.098);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    -webkit-transition: height 0.2s ease-in-out;
+    transition: height 0.2s ease-in-out;
+    height: 77px;
+  }
+  .Nav-menus {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px 20px;
+  }
+  .Nav-brand-logo {
+    display: block;
+    background-image: url(../../hash.png);
+    background-size: 200px 50px;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 200px;
+    text-indent: -100%;
+  }
