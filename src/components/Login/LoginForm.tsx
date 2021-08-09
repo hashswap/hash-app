@@ -13,7 +13,7 @@ function LoginForm(/*{Login, Error}*/) {
     return(
         <form onSubmit={submitHandler}>
             <div className="form-inner">
-            <a className="logo" ></a>
+            <span className="logo"> </span>
                 <div className="form-group">
                     <input type="email" name="username" id ="username"
                     onChange={e => setDetails({...details, username: e.target.value})} value={details.username}></input>
@@ -23,7 +23,7 @@ function LoginForm(/*{Login, Error}*/) {
                 </div>
             </div>
             <div className="form-outer">
-                <label> Don't have an account? <a className="color: blue;" href='/'>Sign up</a> </label>
+                <label> Don't have an account? <a className="color: blue;" href="!#">Sign up</a> </label>
             </div>
         </form>
     )
