@@ -23,7 +23,7 @@ function LoginForm(/*{Login, Error}*/) {
                 </div>
             </div>
             <div className="form-outer">
-                <label> Don't have an account? <a className="color: blue;" href='./'>Sign up</a> </label>
+                <label> Don't have an account? <a className="color: blue;" href='/'>Sign up</a> </label>
             </div>
         </form>
     )
