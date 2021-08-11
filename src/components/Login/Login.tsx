@@ -1,12 +1,14 @@
 import React,{useState} from 'react';
 import LoginForm from './LoginForm';
 import './Login.css';
+import Welcome from './../Welcome/Welcome';
+//import Header from './../Header/Header';
 
 
 function Login (){
     const adminUser = {
-        user: "log@me.in",
-        password: "please"
+        user: "user@user.in",
+        password: "password"
     }
 
     const [user, setUser] = useState("");
@@ -32,13 +34,15 @@ function Login (){
     }
 
     return(
-        <div className="Login">
+        <div >
             {(user !== "") ? (
-                <div className="Home">
-                    <h2>Welcome, <span>{user}</span></h2>
-                    <button onClick={Logout}>Logout</button>
-                </div>
-            ) : <LoginForm Login={Login} Error={Error}/>}
+                <div className="Home" >
+                    <Welcome Logout={Logout}/>
+                </div >
+            ) : 
+            <div className="Login">
+            <LoginForm Login={Login} Error={Error}/>
+            </div>}
         </div>
     );
 }

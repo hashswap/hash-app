@@ -7,7 +7,7 @@ interface Props {
 }
 
 function LoginForm ({Login,Error}:Props) {
-    const [details, setDetails] = useState({user:"user", password:"password"});
+    const [details, setDetails] = useState({user:"user@user.in", password:"password"});
 
     const submitHandler = (e:any) => {
         e.preventDefault();
@@ -15,7 +15,7 @@ function LoginForm ({Login,Error}:Props) {
     }
 
     return(
-        <div>
+        <div className="loginForm">
         <form onSubmit={submitHandler}>
             <div className="form-inner">
             <span className="logo"> </span>

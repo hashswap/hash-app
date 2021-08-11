@@ -3,13 +3,15 @@ import React from 'react';
 //import './App.css';
 //import Header from './components/Header/Header';
 import Login from './components/Login/Login';
+import Welcome from './components/Welcome/Welcome';
 import {Route, BrowserRouter} from 'react-router-dom';
 
 function App() {
   return (
     <BrowserRouter>
       <div>
-        <Route path="/" component={Login}/>
+        <Route exact path="/" component={Login}/>
+        <Route exact path="/Home" component={Welcome}/>
       </div>
     </BrowserRouter>
   );
